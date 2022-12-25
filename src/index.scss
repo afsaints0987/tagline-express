@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin-top: 10rem;
+  align-items: center;
+  min-height: 50vh;
+}
+
+img {
+  width: 350px;
+}
+
+#popover-basic {
+  position: fixed !important;
+  transform: translate3d(896px, 124.5px, 0px) !important;
+}
