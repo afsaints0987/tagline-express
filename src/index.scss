@@ -8,16 +8,17 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  margin-top: 10rem;
+  margin-top: 15rem;
   align-items: center;
   min-height: 50vh;
 }
 
 img {
-  width: 350px;
+  max-width: 250px;
 }
 
 #popover-basic {
   position: fixed !important;
-  transform: translate3d(896px, 124.5px, 0px) !important;
+  transform: translate3d(100.5px) !important;
+
 }

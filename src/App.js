@@ -3,6 +3,7 @@ import {useState} from 'react'
 import {http} from './api'
 import { LoadingSpinner } from './components/Spinner'
 import { TagTooltip } from './components/Tooltip'
+import * as FaIcons from 'react-icons/fa'
 
 function App() {
   const [prompt, setPrompt] = useState('')
@@ -76,8 +77,13 @@ function App() {
 
       <footer>
         <h6 className="text-center fixed-bottom">
-          Tagline Express &copy; {new Date().getFullYear()} | Support my App <a href="https://paypal.me/saints0987" target="_blank" rel="noreferrer">here</a>
+          Tagline Express &copy; {new Date().getFullYear()} 
         </h6>
+        <div className="fixed-top text-lg-end mx-3 mt-3 text-sm-center">
+        <strong>Please support my App:</strong>  
+        <a href="https://paypal.me/saints0987" target="_blank" rel="noreferrer"><FaIcons.FaPaypal size={30} className="text-primary mx-2"/></a>
+        <a href="https://www.buymeacoffee.com/afsaints0987" target="_blank" rel="noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style={{height: "30px"}}/></a>
+        </div>
       </footer>
     </div>
   );
