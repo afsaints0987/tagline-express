@@ -17,7 +17,7 @@ function App() {
   }
 
   const generateTagline = () => {
-    if(!prompt){
+    if(!prompt || !prompt.includes('Write a tagline')){
       setError(true)
       return
     } 
@@ -35,6 +35,7 @@ function App() {
       console.log(taglineData)
       setTagline(taglineData)
       setLoading(false)
+      setPrompt('')
     } catch {
       setLoading(false);
       throw new Error("Cannot Generate Tagline, I'm Sorry...")
@@ -65,7 +66,7 @@ function App() {
           Give it to me!
         </button>
       </div>
-      {error && <p className="text-danger">Dude! Where's your Tagline???</p>}
+      {error && <p className="text-danger">Dude! Where's your Tagline??? Please follow the instruction</p>}
       <div>
         {tagline ? <p className="text-center">Here's your tagline...</p> : ""}
         {loading ? (
