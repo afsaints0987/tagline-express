@@ -17,7 +17,7 @@ function App() {
   }
 
   const generateTagline = () => {
-    if(!prompt || !prompt.includes('Write a tagline')){
+    if(!prompt || !prompt.match('tagline')){
       setError(true)
       return
     } 
