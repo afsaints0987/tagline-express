@@ -71,10 +71,12 @@ function App() {
         {loading ? (
           <LoadingSpinner />
         ) : (
+          tagline && (
           <div className="bg-danger text-light py-3 px-2 rounded-4 shadow mt-4">
-            {tagline && <p className="text-center">Here's your tagline...</p>}
+            <p className="text-center">Here's your tagline...</p>
             <h3 className="text-center">{tagline}</h3>
           </div>
+          )
         )}
       </div>
 
