@@ -16,6 +16,12 @@ function App() {
     setError(false)
   }
 
+  const handleKeyDown = e => {
+    if(e.key === 'Enter'){
+      generateTagline();
+    }
+  }
+
   const generateTagline = () => {
     if(!prompt || !prompt.match('tagline')){
       setError(true)
@@ -82,6 +88,7 @@ function App() {
             placeholder="Write a tagline for..."
             onChange={handleChange}
             value={prompt}
+            onKeyDown={handleKeyDown}
           />
           <button
             className="btn btn-outline-danger"
@@ -102,7 +109,9 @@ function App() {
             tagline && (
               <div className="bg-danger text-light py-3 px-2 rounded-4 shadow mt-4">
                 <p className="text-center">Here's your tagline...</p>
-                <h3 className="text-center" id="tagline-text">{tagline}</h3>
+                <h3 className="text-center" id="tagline-text">
+                  {tagline}
+                </h3>
               </div>
             )
           )}
